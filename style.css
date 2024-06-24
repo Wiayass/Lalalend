@@ -32,7 +32,6 @@ body {
   .box {
     position: absolute;
     max-width: 1280px;
-    min-width: 640px;
     width: 50%;
     height: 130%;
     margin: 10% 10%;
