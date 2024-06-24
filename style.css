@@ -36,7 +36,7 @@ body {
     width: 50%;
     height: 130%;
     margin: 10% 10%;
-    background-color: black;
+    background-color: green;
 
     opacity: 0;
     transform: translateY(50px);
