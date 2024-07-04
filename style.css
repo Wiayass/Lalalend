@@ -1,80 +1,1270 @@
-/* Общие стили для всех устройств */
-body {
-  font-family: Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+MX:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+
+
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
   overflow-x: hidden;
-  background-color: #f4f4f4;
+  /*background: url('stol-sverkhu-4.jpg');*/
+  background-color: white;
 }
 
-.element {
+
+
+.wecmebox {
+  position: absolute;
+  width: 40%;
+  height: 75%;
+  top: -85%;
+  margin: 50%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(212, 212, 212, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(91, 90, 90, 0.37);
   opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  max-width: 90%;
-  width: 600px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateX(100px); /* Начальное положение */
+  transition: opacity 0.5s ease, transform 1.5s ease; /* Плавное изменение */
+  
 }
 
-.element.visible {
-  opacity: 1;
-  transform: translateY(0);
+.wecmebox img{
+  position: absolute;
+  width: 26%;
+  left: 60%;
+  top: 63%;
 }
 
-.box {
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  max-width: 90%;
-  width: 800px;
+
+.wecmeboxh1 h1{
+  position: absolute;
+  color: #E7CB00;
+  font-family: "Oswald", sans-serif;
+  left: 32%;
+  top: -40%;
+  font-size: 9000%;
+  font-weight: 600;
+}
+
+
+.wecmebox.show {
+  opacity: 1; /* Конечная непрозрачность */
+  transform: translateX(0); /* Конечное положение */
+}
+
+
+.wecmebox h1{
+  position: absolute;
+  font-family: "Baskervville SC", serif;
+  cursor: pointer;
+  font-size: 600%;
+  font-weight: 600;
+  padding: 7% 13%;
+}
+
+.wecmebox h2{
+  position: absolute;
+  font-family: "Baskervville SC", serif;
+  font-size: 700%;
+  font-weight: 600;
+  padding: 20% 13%;
+}
+
+.wecmebox p{
+  position: absolute;
+  font-family: "Baskervville SC", serif;
+  font-size: 180%;
+  font-weight: 600;
+  padding: 22% 18%;
+}
+
+
+.block1photo1 img{
+  position: absolute;
+  width: 15%;
+  height: 40%;
+  top: 10%;
+  left: 20%;
+  
   opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transform: rotate(-7deg) translateX(-100px); /* Начальное положение */
+  transition: opacity 0.5s ease, transform 1.5s ease; /* Плавное изменение */
 }
 
-.box h1 {
-  font-size: 1.2em;
-  line-height: 1.6;
+.block1photo1 img.show{
+  opacity: 1; /* Конечная непрозрачность */
+  transform: rotate(-7deg) translateX(0); /* Конечное положение */
+}
+
+.block1photo2 img{
+  position: absolute;
+  width: 15%;
+  top: 60%;
+  left: 14%;
+  transform: rotate(7deg);
+  opacity: 0;
+  transform: rotate(7deg) translateX(-100px); /* Начальное положение */
+  transition: opacity 0.5s ease, transform 1.5s ease; /* Плавное изменение */
+}
+
+
+.block1photo2 img.show{
+  opacity: 1; /* Конечная непрозрачность */
+  transform: rotate(7deg) translateX(0); /* Конечное положение */
+}
+
+
+.block1photo3 img{
+  position: absolute;
+  width: 15%;
+  top: 38%;
+  left: 10%;
+  transform: rotate(7deg);
+  opacity: 0;
+  transform: rotate(-2deg) translateX(-100px); /* Начальное положение */
+  transition: opacity 0.5s ease, transform 1.5s ease; /* Плавное изменение */
+}
+
+
+.block1photo3 img.show{
+  opacity: 1; /* Конечная непрозрачность */
+  transform: rotate(-2deg) translateX(0); /* Конечное положение */
+}
+
+.block2 {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 100%;
+  background-color: #E7CB00;
+  opacity: 0; /* Начальная непрозрачность */
+  transform: translateY(300px); /* Начальное положение */
+  transition: opacity .6s ease, transform 1.5s ease; /* Плавное изменение */
+}
+
+.block2.show {
+  opacity: 1; /* Конечная непрозрачность */
+  transform: translateY(0); /* Конечное положение */
+}
+
+.block2_h1 h1{
+  position: absolute;
+  color: #9C6700;
+  font-family: "Oswald", sans-serif;
+  left: 75%;
+  top:51%;
+  font-size: 3000%;
+  font-weight: 600;
+
+}
+
+
+.block2h1text1 {
+  position: absolute;
+  top: 105%;
+  left: 18.33%;
+  font-family: "Baskervville SC", serif;
+  font-size: 450%;
+  font-weight: 800;
+  color: white;
+  opacity: 0; /* Начальная непрозрачность */
+  transform: translateY(300px); /* Начальное положение */
+  transition: opacity .6s ease, transform 1.5s ease; /* Плавное изменение */
+}
+
+.block2h1text1.show {
+  opacity: 1; /* Конечная непрозрачность */
+  transform: translateY(0); /* Конечное положение */
+}
+
+.block2h1text2 {
+  position: absolute;
+  top: 105%;
+  left: 50.7%;
+  font-family: "Baskervville SC", serif;
+  font-size: 450%;
+  font-weight: 800;
+  color: #E7CB00;
+  opacity: 0; /* Начальная непрозрачность */
+  transform: translateX(300px); /* Начальное положение */
+  transition: opacity .6s ease, transform 1.5s ease; /* Плавное изменение */
+}
+
+.block2h1text2.show {
+  opacity: 1; /* Конечная непрозрачность */
+  transform: translateX(0); /* Конечное положение */
+}
+
+.block2 p{
+  position: absolute;
+  font-family: "Baskervville SC", serif;
+  color: #9C6700;
+  font-size: 180%;
+  font-weight: 600;
+  padding: 20% 29%;
 }
 
 
 
-.box.visible {
+.block2img1 img{
+  position: absolute;
+  width: 40%;
+  top: 120%;
+  left: 55%;
+  border-radius: 10px;
+  border: 5px solid rgb(193, 193, 193);
+  opacity: 0; /* Начальная непрозрачность */
+  transform: rotate(12deg) translateX(200px); /* Начальное положение */
+  transition: opacity .6s ease, transform 1.5s ease; /* Плавное изменение */
+  
+}
+
+
+.block2img1 img.show {
+  opacity: 1; /* Конечная непрозрачность */
+  transform: rotate(12deg) translateX(0); /* Конечное положение */
+  
+}
+
+
+.block2img2 img{
+  position: absolute;
+  width: 20%;
+  top: 175%;
+  left: 67%;
+  border-radius: 10px;
+  border: 5px solid rgb(193, 193, 193);
+  opacity: 0; /* Начальная непрозрачность */
+  transform: rotate(-12deg) translateX(200px); /* Начальное положение */
+  transition: opacity .6s ease, transform 1.5s ease; /* Плавное изменение */
+  
+}
+
+
+.block2img2 img.show {
+  opacity: 1; /* Конечная непрозрачность */
+  transform: rotate(-12deg) translateX(0); /* Конечное положение */
+  
+}
+
+.stickerforblock2 img{
+  position: absolute;
+  width: 15%;
+  top: 170%;
+  left: 45%;
+
+  opacity: 0; /* Начальная непрозрачность */
+  transform:  translateX(-100px); /* Начальное положение */
+  transition: opacity .6s ease, transform 1.5s ease; /* Плавное изменение */
+}
+
+.stickerforblock2 img.show {
+  opacity: 1; /* Конечная непрозрачность */
+  transform: rotate(10deg) translateX(0); /* Конечное положение */
+  
+}
+
+
+.block3 {
+  position: absolute;
+  width: 50%;
+  height: 70%;
+  left: 50%;
+  top: 200%;
+
+  opacity: 0; /* Начальная непрозрачность */
+  transform:  translateX(100px); /* Начальное положение */
+  transition: opacity 1s ease, transform 2.5s ease; /* Плавное изменение */
+
+}
+
+
+.block3 p{
+  position: absolute;
+  font-family: "Baskervville SC", serif;
+  color: #9C6700;
+  font-size: 260%;
+  font-weight: 600;
+  padding: 20% 15%;
+}
+
+.block3.show {
+  opacity: 1; /* Конечная непрозрачность */
+  transform: translateX(0); /* Конечное положение */
+  
+}
+
+
+
+.block3_h1 h1{
+  position: absolute;
+  color: white;
+  font-family: "Oswald", sans-serif;
+  top: 160%;
+  margin-left: 5%;
+  font-size: 10000%;
+  font-weight: 600;
+
+  text-shadow: 
+                -2px -2px 0 #ffe100,  
+                 2px -2px 0 #ffe100,
+                -2px  2px 0 #ffe100,
+                 2px  2px 0 #ffe100; /* Тени, создающие обводку вокруг текста */
+}
+
+
+.block3h1text1 h1{
+  position: absolute;
+  top: 125%;
+  padding: 47%;
+  width: 9%;
+  font-family: "Baskervville SC", serif;
+  font-size: 550%;
+  font-weight: 800;
+  color: #E7CB00;
+  opacity: 0; /* Начальная непрозрачность */
+  transform:  translateX(200px); /* Начальное положение */
+  transition: opacity .6s ease, transform 3s ease; /* Плавное изменение */
+}
+
+.block3h1text1 h1.show {
+  opacity: 1; /* Конечная непрозрачность */
+  transform: translateX(0); /* Конечное положение */
+  
+}
+
+.block3h1text2 h1{
+  position: absolute;
+  top: 149.6%;
+  padding: 45.7%;
+  width: 7%;
+  font-family: "Baskervville SC", serif;
+  font-size: 470%;
+  font-weight: 900;
+  color: #E7CB00;
+
+  opacity: 0; /* Начальная непрозрачность */
+  transform: rotate(270deg) translateX(200px); /* Начальное положение */
+  transition: opacity .6s ease, transform 2s ease; /* Плавное изменение */
+}
+
+.block3h1text2 h1.show {
+  opacity: 1; /* Конечная непрозрачность */
+  transform: rotate(270deg) translateX(0); /* Конечное положение */
+  
+}
+
+
+.block3img1 img{
+  position: absolute;
+  width: 20%;
+  left: 20%;
+  top: 230%;
+}
+
+
+.map {
+  position: absolute;
+  top: 250%;
+  left: 52%;
+  height: 40%; /* Высота карты */
+  width: 35%;   /* Ширина карты */
+
+  opacity: 0; /* Начальная непрозрачность */
+  transform:  translateX(200px); /* Начальное положение */
+  transition: opacity .6s ease, transform 3s ease; /* Плавное изменение */
+}
+
+
+
+.map.show {
+  opacity: 1; /* Конечная непрозрачность */
+  transform: translateX(0); /* Конечное положение */
+  
+}
+
+
+.block4 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #FFC554;
+  top: 300%;
+
+  opacity: 1; /* Начальная непрозрачность */
+  transform:  translateX(0); /* Начальное положение */
+}
+
+
+.block4h1text1 h1{
+  position: absolute;
+  padding: 4%;
+  margin-left: 48%;
+  margin-top: -3%;
+  font-family: "Oswald", sans-serif;
+  font-size: 2470%;
+  font-weight: 600;
+  color: #FFC554;
+  text-shadow: 
+                -2px -2px 0 #ffe100,  
+                 2px -2px 0 #ffe100,
+                -2px  2px 0 #ffe100,
+                 2px  2px 0 #ffe100; /* Тени, создающие обводку вокруг текста */
+
+  opacity: 0; /* Начальная непрозрачность */
+  transform:  translateX(200px); /* Начальное положение */
+  transition: opacity .6s ease, transform 3s ease; /* Плавное изменение */
+}
+
+
+.block4h1text1 h1.show{
   opacity: 1;
-  transform: translateY(0);
+  transform: translateX(0);
+}
+
+.block4h1text2 h1{
+  position: absolute;
+  margin-left: 53%;
+  margin-top: 22%;
+  font-family: "Oswald", sans-serif;
+  font-size: 670%;
+  font-weight: 1000;
+  color: #fff;
+
+  opacity: 0; /* Начальная непрозрачность */
+  transform:  translateX(200px); /* Начальное положение */
+  transition: opacity .6s ease, transform 3s ease; /* Плавное изменение */
+}
+
+.block4h1text2 h1.show{
+  opacity: 1;
+  transform: translateX(0);
 }
 
 
 
-/* Медиа-запросы для адаптации под разные устройства */
 
-/* Планшеты в портретной ориентации и мобильные телефоны в альбомной ориентации */
-@media (max-width: 768px) {
-  .element, .box {
-    width: 90%;
-    padding: 15px;
-  }
-
-  .box h1 {
-    font-size: 1em;
-  }
+.block4textbox1 {
+  position: absolute;
+  width: 25%;
+  height: 42%;
+  background-color: #C4A104;
+  margin-top: 1%;
+  margin-left: 25%;
+  border-radius: 10px;
 }
 
-/* Мобильные телефоны в портретной ориентации */
-@media (max-width: 480px) {
-  .element, .box {
-    width: 95%;
-    padding: 10px;
+.block4textbox1 h1{
+  position: absolute;
+  font-family: "Oswald", sans-serif;
+  margin-top: 2%;
+  margin-left: 2%;
+  font-size: 370%;
+  font-weight: 1000;
+  color: #fff;
+}
+
+
+
+.block4textbox1 p{
+  position: absolute;
+  font-family: "Oswald", sans-serif;
+  width: 70%;
+  margin: 14%;
+  margin-top: 15%;
+  font-size: 140%;
+  font-weight: 1000;
+  color: #fff;
+}
+
+.block4textbox2 {
+  position: absolute;
+  width: 34%;
+  height: 42%;
+  background-color: #C4A104;
+  margin-top: 30%;
+  border-radius: 10px;
+}
+
+
+.block4textbox2 h1{
+  position: absolute;
+  font-family: "Oswald", sans-serif;
+  margin-top: 2%;
+  margin-left: 65%;
+  font-size: 370%;
+  font-weight: 1000;
+  color: #fff;
+}
+
+
+.block4textbox2 p{
+  position: absolute;
+  font-family: "Oswald", sans-serif;
+  width: 70%;
+  margin: 15%;
+  margin-top: 20%;
+  font-size: 200%;
+  font-weight: 1000;
+  color: #fff;
+}
+
+
+.block4photo1 img{
+  position: absolute;
+  width: 15%;
+  top: 10%;
+  left: 2%;
+
+  opacity: 0; /* Начальная непрозрачность */
+  transform:  translateX(100px); /* Начальное положение */
+  transition: rotate(3deg) opacity .6s ease, transform 3s ease; /* Плавное изменение */
+}
+
+
+.block4photo1 img.show {
+  opacity: 1;
+  transform: rotate(3deg) translateX(0);
+}
+
+.block4photo2 img{
+  position: absolute;
+  width: 15%;
+  top: 30%;
+  left: 8%;
+  transform: rotate(-15deg);
+}
+
+
+.block4photo3 img{
+  position: absolute;
+  width: 10%;
+  top: 10%;
+  left: 15%;
+
+  opacity: 0; /* Начальная непрозрачность */
+  transform:  translateX(100px); /* Начальное положение */
+  transition: rotate(-3deg) opacity .6s ease, transform 3s ease; /* Плавное изменение */
+}
+
+
+.block4photo3 img.show {
+  opacity: 1;
+  transform: rotate(-3deg) translateX(0);
+}
+
+
+.block4photo4 img{
+  position: absolute;
+  width: 15%;
+  top: 10%;
+  left: 80%;
+
+  opacity: 0; /* Начальная непрозрачность */
+  transform:  translateX(100px); /* Начальное положение */
+  transition:  opacity .6s ease, transform 3s ease; /* Плавное изменение */
+}
+
+
+.block4photo4 img.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+
+iframe {
+  position: absolute;
+  margin-top: 33%;
+  margin-left: 36%;
+  height: 800px;
+}
+
+
+.block5 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 400%;
+  background-color: white;
+}
+
+
+.block5h1text1 h1{
+  position: absolute;
+  font-family: "Oswald", sans-serif;
+  left: 20%;
+  font-size: 670%;
+  font-weight: 1000;
+  color: #E7CB00;
+
+}
+
+
+.block5textbox1 {
+  position: absolute;
+  width: 30%;
+  height: 70%;
+  top: 15%;
+  left: 20%;
+  border-radius: 20px;
+  background-color: #E7CB00;
+}
+
+.block5textbox1 p{
+  position: absolute;
+  width: 65%;
+  top: 10%;
+  left: 15%;
+  font-size: 230%;
+  font-weight: 1000;
+  color: white;
+}
+
+
+.block5photo1 img{
+  position: absolute;
+  width: 20%;
+  top: 10%;
+  left: 55%;
+  border: 10px solid #C4A104;
+  border-radius: 10px;
+}
+
+.block5photo2 img{
+  position: absolute;
+  width: 15%;
+  top: 58%;
+  left: 57%;
+  border: 10px solid #C4A104;
+  border-radius: 10px;
+}
+
+
+.quote1 {
+  position: absolute;
+  top: 43%;
+  left: 57%;
+  padding-left: 35px;
+  border-left: 4px solid #C4A104;
+  font-family: 'Georgia', 'Times New Roman', serif;
+}
+.quote1 p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 28px;
+  color: #333333;
+}
+.quote1 cite {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 28px;
+  color: #aaaaaa;
+}
+
+
+.quote2 {
+  position: absolute;
+  top: 100%;
+  left: 57%;
+  padding-left: 35px;
+  border-left: 4px solid #C4A104;
+  font-family: 'Georgia', 'Times New Roman', serif;
+}
+.quote2 p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 28px;
+  color: #333333;
+}
+.quote2 cite {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 28px;
+  color: #aaaaaa;
+}
+
+
+.block5img img{
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  top: 110%;
+  left: 57%;
+}
+
+
+.feedback{
+  position: absolute;
+  top: 490%;
+  left: 5%;
+}
+
+
+/*footer*/
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+
+
+
+
+ul{
+	list-style: none;
+}
+.footer{
+  position: absolute;
+	background-color: #FFC554;
+  width: 100%;
+  top: 535%;
+  padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+
+.footer-col h4{
+	font-size: 22px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #E7CB00;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+
+.footer-col ul li a{
+	font-size: 20px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 500;
+	color: #855b07;
+	display: block;
+	transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+
+
+
+
+
+.socialmedialinks1 li a {
+  position: absolute;
+  top: 43%;
+  left: 55%;
+  font-size: 20px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 500;
+	color: #855b07;
+	display: block;
+	transition: all 0.3s ease;
+}
+
+.socialmedialinks1 li a:hover{
+	color: #ffffff;
+}
+
+.socialmedialinks2 li a {
+  position: absolute;
+  top: 59%;
+  left: 55%;
+  font-size: 20px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 500;
+	color: #855b07;
+	transition: all 0.3s ease;
+}
+
+.socialmedialinks2 li a:hover{
+	color: #ffffff;
+}
+
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+
+
+  body{
+    overflow-x: hidden;
   }
 
-  .box h1 {
-    font-size: 0.9em;
+
+  .wecmebox{
+    position: absolute;
+    width: 100%;
+    top: 20%;
+    left: -50%;
+
+
+
+    opacity: 0;
+    transform: translateY(100px); /* Начальное положение */
+    transition: opacity 0.5s ease, transform 1.5s ease; /* Плавное изменение */
   }
+
+  
+
+  .wecmebox.show {
+    opacity: 1; /* Конечная непрозрачность */
+    transform: translateY(0); /* Конечное положение */
+  }
+
+  .wecmebox h1{
+    font-size: 370%;
+  }
+
+  .wecmebox h2{
+    font-size: 550%;
+  }
+
+  .wecmebox p{
+    position: absolute;
+    top: 2%;
+    left: 4%;
+    font-size: 100%;
+  }
+
+
+  .wecmeboxh1{
+    position: absolute;
+    top: -40%;
+    left: 18%;
+    font-size: 80%;
+  }
+
+  
+  .block1photo1 img{
+    position: absolute;
+    width: 40%;
+    height: 20%;
+  }
+
+  .block1photo2 img{
+    position: absolute;
+    top: 18%;
+    left: 60%;
+    width: 40%;
+    height: 20%;
+  }
+
+  .block1photo3 img{
+    position: absolute;
+    top: 23%;
+    width: 40%;
+    height: 20%;
+  }
+
+
+  .wecmebox img{
+    position: absolute;
+    width: 40%;
+    left: 50%;
+  }
+
+/*block2*/
+
+.block2{
+  position: absolute;
+  top: 230%;
 }
+
+
+.block2h1text1.show{
+  position: absolute;
+  top: 120%;
+  left: 3%;
+  font-size: 320%;
+
+  text-shadow: 
+                -.5px -.5px 0 #b09b00,  
+                 .5px -.5px 0 #b09b00,
+                -.5px  .5px 0 #b09b00,
+                 .5px  .5px 0 #b09b00; /* Тени, создающие обводку вокруг текста */
+
+}
+
+
+
+.block2h1text2.show{
+  position: absolute;
+  top: 132%;
+  font-size: 140%;
+}
+
+
+.stickerforblock2 img.show{
+  position: absolute;
+  width: 50%;
+  left: -5%;
+  top: 150%;
+}
+
+.block2img1 img.show{
+  position: absolute;
+  top: 140%;
+}
+
+.block2img2 img.show{
+  position: absolute;
+  top: 156%;
+  width: 40%;
+  left: 55%;
+}
+
+
+
+.block2{
+  position: absolute;
+  width: 100%;
+  height: 140%;
+  top: 180%;
+}
+
+
+.block2 p {
+  position: absolute;
+  width: 130%;
+  left: -13%;
+  font-size: 150%;
+}
+
+
+/*block3*/
+
+
+
+
+.block3_h1{
+  position: absolute;
+  top: 270%;
+}
+
+.block3h1text1 h1.show{
+  position: absolute;
+  top: 298%;
+  left: -5%;
+}
+
+
+.block3h1text2 h1.show{
+  position: absolute;
+  left: -20%;
+  top: 330%;
+}
+
+
+.block3img1 img{
+  position: absolute;
+  width: 60%;
+  top: 360%;
+}
+
+
+
+
+.block3 {
+  position: absolute;
+  top: 390%;
+  width: 76%;
+  font-size: 60%;
+  left: 14%;
+}
+
+.map{
+  position: absolute;
+  width: 75%;
+  top: 450%;
+  left: 13%;
+}
+
+
+
+.block4{
+  position: absolute;
+  top: 500%;
+  height: 300%;
+}
+
+
+.block4h1text1 h1.show{
+  position: absolute;
+  left: -40%;
+  
+  font-size: 550%;
+}
+
+.block4h1text2 h1.show{
+  position: absolute;
+  width: 50%;
+  top: .7%;
+  left: -7%;
+  font-size: 200%;
+}
+
+
+.block4textbox1{
+  position: absolute;
+  width: 90%;
+  left: -20%;
+  height: 38%;
+  top: 12%;
+}
+
+.block4textbox1 p{
+  position: absolute;
+  top: 5%;
+  width: 70%;
+  font-size: 150%
+}
+
+
+.block4textbox2 {
+  position: absolute;
+  width: 90%;
+  left: 5%;
+  height: 15%;
+  top: 62.5%;
+}
+
+.block4textbox2 h1{
+  position: absolute;
+  left: -25%;
+}
+
+.block4textbox2 p{
+  position: absolute;
+  top: 5%;
+  width: 70%;
+  font-size: 150%
+}
+
+
+
+.iframe {
+  position: absolute;
+  width: 90%;
+  left: -30.6%;
+  top: 80%;
+}
+
+.block4photo1 img.show{
+  position: absolute;
+  width: 45%;
+  left: 50%;
+  top: 10%;
+}
+
+.block4photo2 img{
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  top: 57%;
+  transform: rotate(0deg);
+}
+
+.block4photo3 img.show{
+  position: absolute;
+  width: 30%;
+  top: 49%;
+  left: 10%;
+}
+
+.block4photo4 img.show{
+  width: 50%;
+  left: 50%;
+  top: 46%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.block5{
+  position: absolute;
+  top: 805%;
+  height: 80%;
+}
+
+
+.block5h1text1 h1{
+  position: absolute;
+  font-size: 530%;
+}
+
+.block5textbox1 {
+  position: absolute;
+  top: 36%;
+  left: 5%;
+  width: 90%;
+  height: 100%;
+}
+
+.block5textbox1 p{
+  position: absolute;
+  top: 5%;
+  font-size: 157%;
+}
+
+
+
+.block5photo1 img{
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  top: 140%;
+}
+
+.quote1{
+  position: absolute;
+  left: 35%;
+  top: 180%;
+}
+
+
+.block5photo2 img{
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  top: 200%;
+}
+
+.quote2{
+  position: absolute;
+  left: 25%;
+  top: 265%;
+}
+
+
+
+.feedback {
+  position: absolute;
+  left: 5%;
+  top: 1120%;
+  width: 10%;
+  height: 24%;
+}
+
+
+
+.block5img img{
+  position: absolute;
+  width: 80%;
+  height: 90%;
+  left: 10%;
+  top: 290%;
+}
+
+
+
+.socialmedialinks1 {
+  position: absolute;
+  top: 74.8%;
+  width: 90%;
+  left: -2%;
+}
+
+.socialmedialinks2 {
+  position: absolute;
+  top: 80%;
+  width: 90%;
+  left: -2%;
+}
+
+  .footer {
+    position: absolute;
+    width: 100%;
+    top: 1200%;
+  }
+  .footer-col{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+
+
+}
+
+
+
+
+
+
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+
+
