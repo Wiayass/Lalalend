@@ -4,29 +4,276 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lalalend</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 <body>
+
+    <!--<header class="header">
+        <nav class="navbar">
+            <a href="">Home</a>
+            <a href="">History</a>
+            <a href="">Contact</a>
+        </nav>
+    </header>-->
+
+    
+    
+    <!--<div class="1photo" >
+        <img src="" alt="#">
+    </div>-->
     
 
-    <div class="element">Element 1</div>
-    <div class="element">Element 2</div>
-    <div class="element">Element 3</div>
-    <div class="element">Element 4</div>
-    <div class="element">Element 5</div>
-    
-    <div class="box">
-        <h1>Hello! Ремастер невероятно захватывающего мода на оружие! Он добавит большое количество нового оружия и обвесов для него, сложные анимации стрельбы, маневрирования и перезарядки. Кроме того, игроки могут самостоятельно добавлять свои наборы оружия с помощью данных в формате json.
 
-            Авторы: craneblock6666 (github|patreon), MaydayMemory, TartaricAcid, F1zei</h1>
+    <div class="wecmeboxh1">
+        <h1>1</h1>
+    </div>
+
+    <div class="block1photo2">
+        <img src="C:\Users\Farid\OneDrive\Рабочий стол\https---github.com-Wiayass-lalalend.github.io.git\phtforweb\Screenshot_20240412_233903_Telegram.png" alt="">
+    </div>
+
+    <div class="block1photo3">
+        <img src="C:\Users\Farid\OneDrive\Рабочий стол\https---github.com-Wiayass-lalalend.github.io.git\phtforweb\Picsart_24-04-11_09-46-54-906.jpg" alt="">
+    </div>
+
+    <div class="block1photo1">
+        <img src="C:\Users\Farid\OneDrive\Рабочий стол\https---github.com-Wiayass-lalalend.github.io.git\phtforweb\Screenshot_20240206_192308_CapCut.png" alt="">
+    </div>
+
+    
+
+    
+
+    
+    
+    <div class="wecmebox">
+        <h1>Welcome!</h1>
+
+        <h2>I</h2>
+        <p>am sorry, but I did not find font for Russia language, that's why I wrote in English. I was actually too lazy to look and had the site written in about 2 days. The idea came spontaneously and yes it seems that the text can be copied and pasted into a translator. Would it be possible to write a function for it to translate into Russian itself? I think so, but I'm lazy. Well, yes and by the way the site was written to pump up my skills a bit and it seems to have turned out cool 🤷‍♂️.</p>
+
+
+        <img src="C:\Users\Farid\OneDrive\Рабочий стол\https---github.com-Wiayass-lalalend.github.io.git\phtforweb\Screenshot_20240120_212507_Chrome.png" alt="">
+    </div>
+
+    
+
+    
+    
+
+
+    <!--block2-->
+
+    <div class="stickerforblock2">
+        <img src="photo_2024-07-05_02-12-57.jpg" alt="">
+    </div>
+
+    <div class="block2">
+        <div class="block2_h1">
+            <h1>2</h1>
+        </div>
+        <p>
+            Bibizyana adina is a rare form of animal that lives in rainforests and on the edge of savannahs. Her sightings on the dostyk plaza, where she mates, make her of particular interest to nature explorers. These little creatures are known for their colourful feathers and unusual habits. They feed on fruit (sweets) and us (Ayat and me), hunting mostly on the ground, although they can fly. No one knows where she lives, she comes from Semey. Legends say that she lives opposite the Hotel Kazakhstan, where exactly we did not find because we were attacked by her.<br>
+            Bibizyana adina is known for its colorful feathers, unusual habits, and occasional migrations to different countries. Recently, it was spotted in Egypt and there are reports suggesting it might currently be in London. These migrations add to the intrigue surrounding this rare animal.
+        </p>
+    </div>
+
+    
+
+
+    <div class="block2h1text1">
+        <h1>Where does</h1>
+    </div>
+
+    <div class="block2img1"><img src="289097970_5192283770809520_8186681255481625246_n.jpg" alt=""></div>
+    <div class="block2img2"><img src="Казахстан-3-1-708x662.jpg" alt=""></div>
+
+    <div class="block2h1text2">
+        <h1>she lives?</h1>
+    </div>
+
+    
+    
+
+    <!--block3-->
+    <div class="block3_h1">
+        <h1>3</h1>
+    </div>
+
+    
+    <div class="block3h1text1">
+        <h1>does she feed?</h1>
+    </div>
+    <div class="block3h1text2">
+        <h1>WHERE</h1>
+    </div>
+
+
+    
+
+
+    
+    
+    <div class="block3img1"><img src="photo_2024-07-05_02-14-36.jpg" alt=""></div>
+
+
+    <div class="block3">
+        <p>
+            She usually feeds at Paul cafe, where we were able to take a photo before we were attacked by her. Her unusual behaviour and desire for human food make her a particularly curious subject for our research efforts.
+        </p>
+    </div>
+
+
+
+    <div class="map" id="map"></div>
+    
+
+    <!--block4-->
+
+    <div class="block4">
+        <div class="block4h1text1">
+            <h1>How do you</h1>
+        </div>
+
+        <div class="block4h1text2">
+            <h1>protect yourself from her?</h1>
+        </div>
+
+        <div class="block4textbox1">
+            <h1>#1Food</h1>
+            <p>
+                To escape or defend yourself from Adina, you need to offer her food, such as Choco Pie, Doner, or sweets, or give her a bouquet of ranunculus flowers. This will distract her for a while. You can also offer her favorite drink, like tea or coffee, or take her to McDonald's to divert her attention. Additionally, suggesting a fun activity or giving her a small gift (like a certificate to Golden Apple) could help. Engaging her in a light conversation or showing interest in her hobbies might also be effective in keeping her distracted and calm.
+            </p>
+        </div>
+        
+        <iframe class="iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/4jDmJ51x1o9NZB5Nxxc7gY?utm_source=generator" width="15%" height="750px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+        <div class="block4textbox2">
+            <h1>#2Music</h1>
+            <p>
+                To escape or defend yourself from Adina, you can play her favorite track, "Careless Whisper," which lasts for 5 minutes. This might distract her and buy you some time.
+            </p>
+        </div>
+
+
+        <div class="block4photo3">
+            <img src="70sbtgeem5oo0ossk4kg8sokw0ocwk.jpeg" alt="">
+        </div>
+
+        <div class="block4photo4">
+            <img src="photo_2024-07-05_02-20-56.jpg" alt="">
+        </div>
+
+
+        <div class="block4photo2">
+            <img src="62fb822c-09c2-11ee-878f-86f3687d9b18_1ff9655c_9f37_11ed_aec0_9695c69b1d03_5c6a3256 (1).jpg" alt="">
+        </div>
+
+
+        <div class="block4photo1">
+            <img src="cp12p-original.png" alt="">
+        </div>
+
+        
+
+        
+    </div>
+
+
+    
+
+    <!--block5-->
+
+
+    <div class="block5">
+        <div class="block5h1text1">
+            <h1>Creation history</h1>
+        </div>
+
+        <div class="block5textbox1">
+            <p>I'm Malika and I inspired the creator of this site with my idea. One fine evening I was sitting on 🚽 (just kidding ahahahaha) and heard my older brother whining "I don't have any ideas to create a website", I decided that I will solve it проблему🦸🏽 The second I got the idea to create a website with the theme "Adina-Madina" and my brother really recreated it 🤯 That's the real story of the birth of this website, bye bye 💋 to all 💋</p>
+        </div>
+
+        <div class="block5photo1">
+            <img src="photo_2024-07-05_00-34-14.jpg" alt="">
+        </div>
+
+        <blockquote class='quote1'>
+            <p>Code had written </p>
+            <cite>by Farid</cite>
+        </blockquote>
+
+        <div class="block5photo2">
+            <img src="photo_2024-07-05_00-34-22.jpg" alt="">
+        </div>
+        
+
+        <blockquote class='quote2'>
+            <p>Designer / producer / genius / filantrop / billioner </p>
+            <cite>Malika</cite>
+        </blockquote>
+
+
+
+        <div class="block5img">
+            <img src="C:\Users\Farid\OneDrive\Рабочий стол\https---github.com-Wiayass-lalalend.github.io.git\phtforweb\Screenshot_20240212_070643_Telegram.png" alt="">
+        </div>
+
+    </div>
+
+    
+
+    <!--footer-->
+    
+    <div class="feedback">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe5oPceul5qWIVEGShJr9W5R2Cnf9Vtreh0GP0_OoH3EFLOOw/viewform?embedded=true" width="340" height="700" frameborder="0" marginheight="0" marginwidth="0">Загрузка…</iframe>
     </div>
     
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>online shop</h4>
+                    <ul>
+                        <li><a href="#">watch</a></li>
+                        <li><a href="#">bag</a></li>
+                        <li><a href="#">shoes</a></li>
+                        <li><a href="#">dress</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <br>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                    </div>
+
+                </div>
+                <div class="socialmedialinks1"><ul><li><a href="#">Farid's social media</a></li></ul></div>
+                <div class="socialmedialinks2"><ul><li><a href="#">Malika's social media</a></li></ul></div>
+            </div>
+        </div>
+    </footer>
     
     
-    
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="index.js"></script>
-
-
-
 </body>
 </html>
