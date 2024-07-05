@@ -845,7 +845,7 @@ ul{
 }
 
 /*responsive*/
-@media(max-width: 368px){
+@media(max-width: 1468px){
 
 
   body{
@@ -1261,10 +1261,5 @@ ul{
 
 
 
-@media(max-width: 574px){
-  .footer-col{
-    width: 100%;
-}
-}
 
 
